@@ -322,6 +322,20 @@ Considere a fórumla de atualização velocidade:
 ```
     velocidade = velocidadeInicial + aceleracao*tempo
 ```
+```
+var distancia, tempo, velocidade, velocidadeInicial, aceleracao, velocidadeMaxima, tempoMaximo, distanciaDeterminada;
+//unidades do S.I.
+
+ENQUANTO (velocidade <= velocidadeMaxima E tempo <= tempoMaximo){
+	distancia = velocidadeInicial * tempo + 0.5 * aceleracao * tempo ^ 2;
+	SE (distancia == distanciaDeterminada){
+		tempoMinutos = tempo / 60;
+		IMPRIMA (tempoMinutos);
+	}
+	velocidade = velocidadeInicial + aceleracao * tempo;
+	tempo +=1;
+}
+```
 
 ______
 
