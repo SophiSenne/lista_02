@@ -366,3 +366,23 @@ matrizSoma <- SomaDeMatrizes(matrizA, matrizB)
 Escrever("Soma das matrizes:")
 ImprimirMatriz(matrizSoma)
 ```
+```
+Função MultiplicacaoDeMatrizes(matrizA, matrizB){
+
+    SE quantidadeDeColunas(matrizA) ≠ quantidadeDeLinhas(matrizB){
+        Retornar "As matrizes não podem ser multiplicadas."
+    }SENAO{
+        var matrizProduto [quantidadeDeLinhas(matrizA)][quantidadeDeColunas(matrizB)];
+
+        PARA (i = 0; i < quantidadeDeLinhas(matrizA); i++){
+		PARA (j = 0; j < quantidadeDeColunas(matrizB); j ++){
+			matrizProduto [i][j] = 0;
+			PARA (k = 0; k < quantidadeDeLinhas(matrizA); k++){
+				matrizProduto [i][j] += matrizA[i][k] * matrizB[k][j];
+			}
+		}
+	}
+	
+        Retornar matrizProduto;
+}
+```
